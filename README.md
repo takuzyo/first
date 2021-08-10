@@ -11,4 +11,5 @@
 
 ```javascript=40
 var a = 0;
+a = 1;
 ```
