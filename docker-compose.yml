@@ -1,7 +1,15 @@
 version: '3'
 services:
   workspace:
-    build: .
+    build: ./workspace
     tty: true
     volumes:
       - ./work:/work
+      
+  httpd:
+    build: ./httpd
+    tty: true
+    ports: 
+      - 8080:80
+    volumes:
+      - ./work/htdocs:/usr/local/apache2/htdocs
